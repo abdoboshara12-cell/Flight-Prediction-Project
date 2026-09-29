@@ -2,7 +2,7 @@
 
 This project uses flight data to predict **how many minutes late a flight will depart**. The dataset contains approximately 250,000 Southwest Airlines flights departing from Los Angeles International Airport (LAX).
 
-## Data
+## Data(Important Info)
 
 The data comes from the [Bureau of Transportation Statistics](https://www.transtats.bts.gov/ONTIME/Departures.aspx) and covers 2017 through 2024.
 
