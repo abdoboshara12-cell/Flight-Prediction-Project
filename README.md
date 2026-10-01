@@ -85,3 +85,5 @@ I plan to compare Linear Regression and Random Forest Regressor. I will evaluate
 
 The dataset contains only Southwest flights departing LAX. It does not include weather, cancellation flags, or all factors that may cause a delay
 >>>>>>> 17f02c9ff7c71627e37f4fc1cdc443aecdb04527
+>>>>>>>
+>>>>>>> [View the full experiment report with graphs and results](docs/EXPERIMENT_REPORT.md)
