@@ -1,0 +1,14 @@
+feature
+Destination Airport
+day_of_week
+month
+departure_hour
+year
+is_weekend
+minutes_since_midnight
+departure_time_sin
+departure_time_cos
+day_of_week_sin
+day_of_week_cos
+month_sin
+month_cos
