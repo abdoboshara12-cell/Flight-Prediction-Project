@@ -1,87 +1,35 @@
-<<<<<<< HEAD
-# Flight Departure Delay Prediction
+# Flight Delay Prediction
 
-This project uses flight data to predict **how many minutes late a flight will depart**. The dataset contains approximately 250,000 Southwest Airlines flights departing from Los Angeles International Airport (LAX).
+A machine learning project using 251,780 Southwest Airlines flights departing Los Angeles International Airport (LAX) to explore departure delays.
 
-## Data
+I tested regression models to predict delay minutes, then developed classifiers to identify flights departing at least 15 minutes late. The project documents each experiment, including baseline comparisons, feature engineering, and threshold tuning.
 
-The data comes from the [Bureau of Transportation Statistics](https://www.transtats.bts.gov/ONTIME/Departures.aspx) and covers 2017 through 2024.
+## Data source
 
-Place the downloaded CSV at `data/raw/flights.csv`. The cleaning script reads that file and saves the usable flights to `data/processed/flights_clean.csv`. It keeps all usable flights rather than taking a smaller sample.
+Flight records were obtained from the [Bureau of Transportation Statistics](https://www.transtats.bts.gov/ONTIME/Departures.aspx), covering Southwest departures from LAX during 2017–2024.
 
-## Data cleaning
+## Skills developed
 
-`src/clean_data.py`:
+### Data preparation and feature engineering
+- Cleaned and transformed flight records using Python and pandas.
+- Created calendar, scheduled departure time, and cyclical features.
+- Kept outcome information out of model inputs to prevent data leakage.
 
-- Skips the report information above the CSV header
-- Keeps the flight date, destination, scheduled departure time, and departure delay
-- Removes rows with missing or invalid required values
-- Creates the day of the week and scheduled departure hour
-- Saves the cleaned CSV
+### Machine learning
+- Built preprocessing and training pipelines with scikit-learn.
+- Trained Linear Regression, Logistic Regression, and Random Forest models.
+- Tuned classification thresholds to balance precision and recall.
 
-Run it from the main project folder:
+### Evaluation and experimentation
+- Used chronological training, validation, and test splits.
+- Compared model performance against simple baselines.
+- Evaluated MAE, precision, recall, F1, and confusion matrices.
 
-```bash
-source .venv/bin/activate
-python src/clean_data.py
-```
+### Visualization and reproducibility
+- Generated graphs and Markdown reports from saved experiment results.
+- Saved model pipelines and decision thresholds with joblib.
+- Preserved experiment progression using Git and GitHub.
 
-## Prediction goal
+## Full project walkthrough
 
-The model will predict `Departure delay (Minutes)`. Its inputs will include the destination airport, day of the week, and scheduled departure hour.
-
-The recorded delay and actual departure time will **not** be used as inputs because they are not known before the flight departs.
-
-## Models and evaluation
-
-I plan to compare Linear Regression and Random Forest Regressor. I will evaluate them using mean absolute error (MAE), which measures the average size of the prediction error in minutes.
-
-**Results will be added after training the models.**
-
-## Limitations
-
-The dataset contains only Southwest flights departing LAX. It does not include weather, cancellation flags, or all factors that may cause a delay
-=======
-# Flight Departure Delay Prediction
-
-This project uses flight data to predict **how many minutes late a flight will depart**. The dataset contains approximately 250,000 Southwest Airlines flights departing from Los Angeles International Airport (LAX).
-
-## Data(Important Info)
-
-The data comes from the [Bureau of Transportation Statistics](https://www.transtats.bts.gov/ONTIME/Departures.aspx) and covers 2017 through 2024.
-
-Place the downloaded CSV at `data/raw/flights.csv`. The cleaning script reads that file and saves the usable flights to `data/processed/flights_clean.csv`. It keeps all usable flights rather than taking a smaller sample.
-
-## Data cleaning
-
-`src/clean_data.py`:
-
-- Skips the report information above the CSV header
-- Keeps the flight date, destination, scheduled departure time, and departure delay
-- Removes rows with missing or invalid required values
-- Creates the day of the week and scheduled departure hour
-- Saves the cleaned CSV
-
-Run it from the main project folder:
-
-```bash
-source .venv/bin/activate
-python src/clean_data.py
-```
-
-## Prediction goal
-
-The model will predict `Departure delay (Minutes)`. Its inputs will include the destination airport, day of the week, and scheduled departure hour.
-
-The recorded delay and actual departure time will **not** be used as inputs because they are not known before the flight departs.
-
-## Models and evaluation
-
-I plan to compare Linear Regression and Random Forest Regressor. I will evaluate them using mean absolute error (MAE), which measures the average size of the prediction error in minutes.
-
-**Results will be added after training the models.**
-
-## Limitations
-
-The dataset contains only Southwest flights departing LAX. It does not include weather, cancellation flags, or all factors that may cause a delay
->>>>>>> 17f02c9ff7c71627e37f4fc1cdc443aecdb04527
+Open the **Contributing** tab for the complete work, including implementation details, experiment comparisons, graphs, results, and lessons learned.
