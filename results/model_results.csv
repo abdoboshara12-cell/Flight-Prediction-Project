@@ -1,0 +1,4 @@
+model,validation_mae_minutes,test_mae_minutes,selected
+Median Baseline,14.710827247751661,14.608872433218245,True
+Linear Regression,15.567917207729018,15.378579843557224,False
+Random Forest,15.560323912808238,15.32369547349422,False
