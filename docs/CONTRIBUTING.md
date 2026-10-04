@@ -15,8 +15,8 @@ probability cutoff of **0.25**.
 |---|---:|
 | Precision | 0.433 |
 | Recall | 0.448 |
-| F1 | 0.440 |
-| Accuracy | 0.719 |
+| F1 | 0.611 |
+| Accuracy | 0.782 |
 
 Test F1 changed by **+0.045** compared with the default
 classification experiment's selected model.
